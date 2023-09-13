@@ -397,7 +397,7 @@ if($text == "⌞𝐔𝐩𝐝𝐚𝐭𝐞 ~ 𝐌𝐚𝐝𝐞𝐥𝐢𝐧𝐞⌝")
 if($text == "⌞𝐔𝐩𝐝𝐚𝐭𝐞 ~ 𝐘𝐨𝐮𝐫 ~ 𝐁𝐨𝐭⌝"){
 	bot('sendMessage', ['chat_id' => $chat_id, 'text' => "The source has been updated ",
 	]);
-	$up_file = curl_get("https://raw.githubusercontent.com/wqrqwfqw/xn/main/bot.php");
+	$up_file = curl_get("https://github.com/Kdjdkdhdkdbdkdd/Bot-delete-/blob/main/bot.php");
 	file_put_contents("bot.php",$up_file);
 	shell_exec("killall screen && screen -dmS bot php7.4 bot.php");
 }
