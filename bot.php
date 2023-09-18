@@ -112,41 +112,20 @@ $data = $cq['data'];
 $message_id = $cq['message']['message_id'];
 $chat_id2 = $cq['message']['chat']['id'];
 $group = file_get_contents("ID");
-$url = "";
-$g = file_get_contents($url);
-$js = json_decode($g);
-$da = $js->date;
-$time = $js->time;
-$day = $js->day;
-$month = $js->month;
-$ad = array("$group");
-if($text == "/start" and !in_array($chat_id,$ad) and $chat_id != $group = null){
-bot('sendmessage',[ 
-'chat_id'=>$chat_id,  
-'text'=>" 
-- 𝒘𝒆𝒍𝒄𝒐𝒎 𝒕𝒐 𝒉𝒆𝒍𝒍 [$name](tg://user?id=$chat_id) !
-- 𝒊𝒏 𝒕𝒉𝒆 𝒄𝒉𝒆𝒄𝒌𝒆𝒓 𝒖𝒔𝒆𝒓 𝒏𝒂𝒎𝒆 𝒕𝒆𝒍𝒆𝒈𝒓𝒂𝒎 
-- 𝒅𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒅 𝒃𝒚 𝒎𝒂x 🇪🇬 @Turbo_ismax .
-",'parse_mode' => "MarkDown", 'disable_web_page_preview' => true,
-'reply_markup' => json_encode(['inline_keyboard' => [
-[['text' => "-𝒎𝒂x'", 'url' => "https://t.me/Y_Y_a"]],
-[['text' => "-𝒎𝒆 𝒄𝒉𝒂𝒏𝒏𝒆𝒍'", 'url' => "https://t.me/Turbo_ismax"]],
-]]) 
-]);
-}
+$houda = json_decode(file_get_contents("houda.json"),true);
+
 
 if ($chat_id == $group) {
 if ($text) {
 if($text == '/start' or $text == '->' or $text == "Back"){
-bot('sendvideo', ['video' =>'https://t.me/vd_d_dd/29', 'chat_id' => file_get_contents("ID"), 'caption' => "• ➞ 𝐇𝐈 \n• ➞ 𝐓𝐇𝐄 𝐁𝐄𝐒𝐓 𝐂𝐇𝐄𝐂𝐊𝐄𝐑 𝐈𝐍 𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌\n• ➞ 𝐁𝐲 : 𝐌𝐀𝐗",
+bot('sendvideo', ['video' =>'https://t.me/dhdjdbfjfbfh/12', 'chat_id' => file_get_contents("ID"), 'caption' => "• ➞ 𝐇𝐈 \n• ➞ 𝐓𝐇𝐄 𝐁𝐄𝐒𝐓 𝐂𝐇𝐄𝐂𝐊𝐄𝐑 𝐈𝐍 𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌\n• ➞ 𝐁𝐲 : 𝐌𝐀𝐗",
 'parse_mode' => "MarkDown", 
 'disable_web_page_preview' => true,
 'reply_markup' => json_encode(['resize_keyboard' => true, 'keyboard' => [
 [["text" =>"⌞𝐀𝐝𝐝 𝐃𝐞𝐥𝐞𝐭 ~ 𝐍𝐮𝐦𝐛𝐞𝐫⌝"],["text" =>"⌞𝐀𝐝𝐝 𝐃𝐞𝐥𝐞𝐭 ~ 𝐔𝐬𝐞𝐫⌝"]],
 [["text" =>"⌞𝐑𝐮𝐧 ~ 𝐒𝐭𝐨𝐩⌝"]],
 [["text" =>"⌞𝐂𝐥𝐞𝐚𝐫 ~ 𝐋𝐢𝐬𝐭⌝"],["text" =>"⌞𝐒𝐡𝐨𝐰 ~ 𝐋𝐢𝐬𝐭⌝"]],
-[["text" =>"⌞𝐏𝐢𝐧 𝐀𝐥𝐥⌝"],["text" =>"⌞𝐒𝐩𝐨𝐮𝐫𝐭⌝"],
-["text" =>"⌞𝐓𝐨 𝐁𝐨𝐭 ↺⌝"],
+[["text" =>"⌞𝐏𝐢𝐧 𝐀𝐥𝐥⌝"],
 [["text" =>"⌞𝐑𝐞𝐬𝐭 ~ 𝐂𝐡𝐞𝐜𝐤𝐞𝐫𝐬⌝"],["text" =>"⌞𝐔𝐩𝐝𝐚𝐭𝐞 ~ 𝐂𝐡𝐞𝐜𝐤𝐞𝐫⌝"]],
 [["text" =>"⌞𝐂𝐥𝐢𝐜𝐤𝐬⌝"],["text" =>"⌞𝐍𝐮𝐦𝐛𝐞𝐫𝐬⌝"]],
 [["text" =>"⌞𝐒𝐭𝐚𝐭𝐮𝐬 ~ 𝐏𝐌𝟐⌝"],["text" =>"⌞𝐒𝐭𝐚𝐭𝐮𝐬 ~ 𝐓𝐲𝐩𝐞⌝"]], 
@@ -154,138 +133,6 @@ bot('sendvideo', ['video' =>'https://t.me/vd_d_dd/29', 'chat_id' => file_get_con
 [["text" =>"⌞𝐒𝐭𝐨𝐩 ~ 𝐀𝐥𝐥⌝"],["text" =>"⌞𝐑𝐮𝐧 ~ 𝐀𝐥𝐥⌝"]],] ]) ]);
 }
 }
-
-
-if ($chat_id == $group) {
-if($text == "⌞𝐓𝐨 𝐁𝐨𝐭 ↺⌝"){
-bot('sendMessage', ['chat_id' => $chat_id,
-'text'=>"⌁ Checkers  Bot 🐊",
-'reply_markup'=>json_encode(['inline_keyboard'=>[
-[['text'=>"[ Checker Bot ]",'callback_data'=>"bot"]],
-]])]);
-}}
-
-if($data == "bot"){
-bot('deleteMessage',[
-'chat_id'=>$chat_id2,
-'message_id'=>$message_id
-]);
-bot('sendMessage',['chat_id'=>$chat_id2,'message_id'=>$message_id,
-'text'=>"⌁ Data Checker bot , king @Turbo_ismax 🐊",
-'reply_markup'=>json_encode(['inline_keyboard'=>[
-[['text'=>"▫️Add User",'callback_data'=>"O1"],['text'=>"▫️Delet User",'callback_data'=>"O2"]],
-[['text'=>"▫️Stop",'callback_data'=>"O3"],['text'=>"▫️Run",'callback_data'=>"O4"]],
-[['text'=>"▫️Name Bot",'callback_data'=>"O5"]],
-[['text'=>"▫️Delet Number",'callback_data'=>"dbot"]],
-[['text'=>"▫️Show Users",'callback_data'=>"M7"],['text'=>"▫️Delet All Users",'callback_data'=>"O8"]],
-]
-])]);
-}
-if($data == "#bot"){
-bot('deleteMessage',[
-'chat_id'=>$chat_id2,
-'message_id'=>$message_id
-]);
-bot('sendMessage',['chat_id'=>$chat_id2,'message_id'=>$message_id,
-'text'=>"⌁ Data Checker bot , king @Turbo_ismax",
-'reply_markup'=>json_encode(['inline_keyboard'=>[
-[['text'=>"▫️Add User",'callback_data'=>"O1"],['text'=>"▫️Delet User",'callback_data'=>"O2"]],
-[['text'=>"▫️Stop",'callback_data'=>"O3"],['text'=>"▫️Run",'callback_data'=>"O4"]],
-[['text'=>"▫️Name Bot",'callback_data'=>"O5"]],
-[['text'=>"▫️Delet Number",'callback_data'=>"dbot"]],
-[['text'=>"▫️Show Users",'callback_data'=>"M7"],['text'=>"▫️Delet All Users",'callback_data'=>"O8"]],
-]
-])]);
-}
-
-if($data == "O1"){
-bot('deleteMessage',[
-'chat_id'=>$chat_id2,
-'message_id'=>$message_id
-]);
-bot('sendMessage',['chat_id'=>$chat_id2,'message_id'=>$message_id,
- 'text'=>"⌁ Add users list Bot",'reply_markup'=>json_encode(['inline_keyboard'=>[[['text'=>"->",'callback_data'=>"#bot"]],]]) ]);
-file_put_contents('mode', 'adbot');
-}
-if($data == "O2"){
-bot('deleteMessage',[
-'chat_id'=>$chat_id2,
-'message_id'=>$message_id
-]);
-bot('sendMessage',['chat_id'=>$chat_id2,'message_id'=>$message_id,
- 'text'=>"⌁ send banned users list ",'reply_markup'=>json_encode(['inline_keyboard'=>[[['text'=>"->",'callback_data'=>"#bot"]],]]) ]);
-file_put_contents('mode', 'Unbot');
-}
-if($data == "O4"){
- unlink('xm');
- bot('deleteMessage',[
-'chat_id'=>$chat_id2,
-'message_id'=>$message_id
-]);
-bot('sendMessage',['chat_id'=>$chat_id2,'message_id'=>$message_id,
-'text'=>"
-⌁ Im Run bot ✅
-",'reply_markup'=>json_encode(['inline_keyboard'=>[[['text'=>"->",'callback_data'=>"#bot"]],]]) ]);
-shell_exec("pm2 stop 11.php");
-shell_exec("pm2 start 11.php");
-shell_exec("pm2 stop ml.php");
-shell_exec("pm2 start ml.php");
-$lop = 0;
-file_put_contents("xm", $lop);
-$info = json_decode(file_get_contents('info.json'),true);
-$info["bot"] = "on";
-file_put_contents('info.json', json_encode($info));
-}
-if($data == "O3"){
- unlink('xm');
- bot('deleteMessage',[
-'chat_id'=>$chat_id2,
-'message_id'=>$message_id
-]);
-bot('sendMessage',['chat_id'=>$chat_id2,'message_id'=>$message_id,
-'text'=>"
-⌁ Im stopped bot ✅
-",'reply_markup'=>json_encode(['inline_keyboard'=>[[['text'=>"->",'callback_data'=>"#bot"]],]]) ]);
-shell_exec("pm2 stop 11.php");
-shell_exec("pm2 stop ml.php");
-$info = json_decode(file_get_contents('info.json'),true);
-$info["bot"] = "off";
-file_put_contents('info.json', json_encode($info));
-}
-if($data == "O8"){
-bot('deleteMessage',[
-'chat_id'=>$chat_id2,
-'message_id'=>$message_id
-]);
-bot('sendMessage',['chat_id'=>$chat_id2,'message_id'=>$message_id,
-'text'=>"⌁ Send the user to delete ",'reply_markup'=>json_encode(['inline_keyboard'=>[[['text'=>"->",'callback_data'=>"#bot"]],]]) ]);
-unlink("bot");
-}
-if($data == "O5"){
-bot('deleteMessage',[
-'chat_id'=>$chat_id2,
-'message_id'=>$message_id
-]);
-bot('sendMessage',['chat_id'=>$chat_id2,'message_id'=>$message_id,
-'text'=>"- Send the Name Bot !",'reply_markup'=>json_encode(['inline_keyboard'=>[[['text'=>"->",'callback_data'=>"#bot"]],]]) ]);
-$step = "bot";
-}
-
-if($data == "O6"){
- bot('editMessagetext',['chat_id'=>$chat_id2,'message_id'=>$message_id,
-'text'=>"• حسناً . الان ارسل كود التحقق المكون من ٥ ارقام مثال  \n63796 ",'reply_markup'=>json_encode(['inline_keyboard'=>[[['text'=>"->",'callback_data'=>"#bot"]],]]) ]);
-shell_exec("pm2 stop 11.php");
-shell_exec("pm2 stop ml.php");
-unlink("bot.madeline");
-unlink("bot.madeline.lock");
-$step = "p7";
-}
-
-if ($text == "⌞𝐒𝐩𝐨𝐮𝐫𝐭⌝") {
-  $response = bot('sendMessage', [
-   'chat_id' => $chat_id,
-   'text' => "𝐇𝐢, 𝐌𝐀𝐗 • @Y_Y_A • 
-𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐒𝐩𝐲 𝐂𝐡𝐞𝐜𝐤𝐞𝐫 • @Turbo_ismax • 🇪🇬. ,
 
 
 if ($text == "⌞𝐏𝐢𝐧𝐠⌝") {
@@ -305,7 +152,6 @@ if ($text == "⌞𝐏𝐢𝐧𝐠⌝") {
 	$number8 = file_get_contents('phone8');
 	$number9 = file_get_contents('phone9');
 	$number10 = file_get_contents('phone10');
-	$number11 = file_get_contents('phone11');
 	$num1 = $info["num1"];
 	$num2 = $info["num2"];
 	$num3 = $info["num3"];
@@ -316,7 +162,6 @@ if ($text == "⌞𝐏𝐢𝐧𝐠⌝") {
 	$num8 = $info["num8"];
 	$num9 = $info["num9"];
 	$num10 = $info["num10"];
-	$num11 = $info["num11"];
 	if ($chat_id == $group) {
 if($text == "⌞𝐍𝐮𝐦𝐛𝐞𝐫𝐬⌝"){
 bot('sendMessage', ['chat_id' => $chat_id,
@@ -332,7 +177,6 @@ bot('sendMessage', ['chat_id' => $chat_id,
 [['text' => "$number8",'callback_data' => "#Back"]],
 "$number9",'callback_data' => "#Back"]],
 "$number10",'callback_data' => "#Back"]],
-[['text' => "𖠜Bot : $number11",'callback_data' => "#Back"]],
 [['text'=>"->",'callback_data'=>"#Back"]],
 ]])]);
 }}
@@ -349,7 +193,6 @@ shell_exec("pm2 stop 7.php");
 shell_exec("pm2 stop 8.php");
 shell_exec("pm2 stop 9.php");
 shell_exec("pm2 stop 10.php");
-shell_exec("pm2 stop 11.php");
 
 unlink('users');
 unlink('u2');
@@ -360,8 +203,8 @@ unlink('u6');
 unlink('u7');
 unlink('u8');
 unlink('u9');
-unlink('u10');
-unlink('u11');
+unlink('u10')
+
 }	
 ##اضف رقم او حذف###
 if ($chat_id == $group) {
@@ -378,7 +221,7 @@ bot('sendMessage', ['chat_id' => $chat_id, 'text' => "Select Your Login",
 [["text" =>"Login7"],["text" =>"Delete number7"]],
 [["text" =>"Login8"],["text" =>"Delete number8"]],
 [["text" =>"Login9"],["text" =>"Delete number9"]],
-[["text" =>"Login10"],["text" =>"Delete number10"],["text" =>"Login bot"]],],]) ]);
+[["text" =>"Login10"],["text" =>"Delete number10"]],],]) ]);
 }}
 
 if ($text == "⌞𝐒𝐭𝐚𝐭𝐮𝐬 ~ 𝐏𝐌𝟐⌝") {
@@ -418,7 +261,6 @@ if ($text == "⌞𝐒𝐭𝐚𝐭𝐮𝐬 ~ 𝐓𝐲𝐩𝐞⌝") {
     $aorc8 = file_get_contents("type8");
     $aorc9 = file_get_contents("type9");
     $aorc10 = file_get_contents("type10");
-    $aorc11 = file_get_contents("type11");
 
     $message = "type1 : " . $aorc1 . "\n";
     $message .= "type2 : " . $aorc2 . "\n";
@@ -430,7 +272,6 @@ if ($text == "⌞𝐒𝐭𝐚𝐭𝐮𝐬 ~ 𝐓𝐲𝐩𝐞⌝") {
     $message .= "type8 : " . $aorc8 . "\n";
 	$message .= "type9 : " . $aorc9 . "\n";
     $message .= "type10 : " . $aorc10 . "\n"; 
-    $message .= "type11 : " . $aorc10 . "\n"; 
 
     bot('sendMessage', ['chat_id' => $chat_id, 'text' => $message, 'reply_markup'=>json_encode(['inline_keyboard'=>[[['text'=>"->",'callback_data'=>"#Back"]],]])]);
     }
@@ -446,7 +287,6 @@ if ($text == "⌞𝐒𝐭𝐨𝐩 ~ 𝐀𝐥𝐥⌝") {
 	shell_exec("pm2 stop 8.php");
 	shell_exec("pm2 stop 9.php");
 	shell_exec("pm2 stop 10.php");
-	shell_exec("pm2 stop 11.php");
 	bot('sendMessage', ['chat_id' => $chat_id, 'text' => "⌁ Done stop all checkers ",'reply_markup'=>json_encode(['inline_keyboard'=>[[['text'=>"->",'callback_data'=>"#Back"]],]])]);
 	$info = json_decode(file_get_contents('info.json'),true);
 	$info["num1"] = "off";
@@ -468,8 +308,6 @@ if ($text == "⌞𝐒𝐭𝐨𝐩 ~ 𝐀𝐥𝐥⌝") {
 	$info["num9"] = "off";
 	file_put_contents('info.json', json_encode($info));
 	$info["num10"] = "off";
-	file_put_contents('info.json', json_encode($info));
-		$info["num11"] = "off";
 	file_put_contents('info.json', json_encode($info));
 	}
 	
@@ -506,8 +344,6 @@ if($text == "⌞𝐔𝐩𝐝𝐚𝐭𝐞 ~ 𝐅𝐢𝐥𝐞𝐬 ~ 𝐂𝐡𝐞�
 	$up_file = curl_get("https://github.com/Kdjdkdhdkdbdkdd/Bot-delete-/blob/main/9.php");
 	file_put_contents("10.php",$up_file);
 	$up_file = curl_get("https://github.com/Kdjdkdhdkdbdkdd/Bot-delete-/blob/main/10.php");
-	file_put_contents("11.php",$up_file);
-	$up_file = curl_get("https://github.com/Kdjdkdhdkdbdkdd/Bot-delete-/blob/main/11.php");
 	shell_exec("pm2 stop 1.php");
 	shell_exec("pm2 stop 2.php");
 	shell_exec("pm2 stop 3.php");
@@ -518,7 +354,6 @@ if($text == "⌞𝐔𝐩𝐝𝐚𝐭𝐞 ~ 𝐅𝐢𝐥𝐞𝐬 ~ 𝐂𝐡𝐞�
 	shell_exec("pm2 stop 8.php");
 	shell_exec("pm2 stop 9.php");
 	shell_exec("pm2 stop 10.php");
-	shell_exec("pm2 stop 11.php");
 	shell_exec("pm2 stop 1.php");
 	shell_exec("pm2 start 1.php");
 	shell_exec("pm2 start 2.php");
@@ -530,7 +365,6 @@ if($text == "⌞𝐔𝐩𝐝𝐚𝐭𝐞 ~ 𝐅𝐢𝐥𝐞𝐬 ~ 𝐂𝐡𝐞�
 	shell_exec("pm2 start 8.php");
 	shell_exec("pm2 start 9.php");
 	shell_exec("pm2 start 10.php");
-	shell_exec("pm2 start 11.php");
 
 }
 if($text == "⌞𝐔𝐩𝐝𝐚𝐭𝐞 ~ 𝐌𝐚𝐝𝐞𝐥𝐢𝐧𝐞⌝"){
