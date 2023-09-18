@@ -112,8 +112,28 @@ $data = $cq['data'];
 $message_id = $cq['message']['message_id'];
 $chat_id2 = $cq['message']['chat']['id'];
 $group = file_get_contents("ID");
-$houda = json_decode(file_get_contents("houda.json"),true);
-
+$url = "";
+$g = file_get_contents($url);
+$js = json_decode($g);
+$da = $js->date;
+$time = $js->time;
+$day = $js->day;
+$month = $js->month;
+$ad = array("$group");
+if($text == "/start" and !in_array($chat_id,$ad) and $chat_id != $group = null){
+bot('sendmessage',[ 
+'chat_id'=>$chat_id,  
+'text'=>" 
+- 𝒘𝒆𝒍𝒄𝒐𝒎 𝒕𝒐 𝒉𝒆𝒍𝒍 [$name](tg://user?id=$chat_id) !
+- 𝒊𝒏 𝒕𝒉𝒆 𝒄𝒉𝒆𝒄𝒌𝒆𝒓 𝒖𝒔𝒆𝒓 𝒏𝒂𝒎𝒆 𝒕𝒆𝒍𝒆𝒈𝒓𝒂𝒎 
+- 𝒅𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒅 𝒃𝒚 𝓶𝓪𝔁 🇪🇬 @Turbo_ismax .
+",'parse_mode' => "MarkDown", 'disable_web_page_preview' => true,
+'reply_markup' => json_encode(['inline_keyboard' => [
+[['text' => "-𝓶𝓪𝔁'", 'url' => "https://t.me/Y_Y_a"]],
+[['text' => "-𝒎𝒆 𝒄𝒉𝒂𝒏𝒏𝒆𝒍'", 'url' => "https://t.me/Turbo_ismax"]],
+]]) 
+]);
+}
 
 if ($chat_id == $group) {
 if ($text) {
